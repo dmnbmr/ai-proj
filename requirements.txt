@@ -1,0 +1,5 @@
+ultralytics
+gradio
+transformers
+torch
+opencv-python-headless
