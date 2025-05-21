@@ -8,7 +8,7 @@ This project detects license plates from cars.
 | Name          | URL |
 |---------------|-----|
 | Code          | [GitHub Repository](https://github.com/dmnbmr/ai-proj) |
-| Model         | [Github Model Folder](https://github.com/dmnbmr/ai-proj) |
+| Model         | [Github Model Folder](https://github.com/dmnbmr/ai-proj/tree/main/license-plate-detector) |
 | Huggingface   | [Huggingface Space](https://huggingface.co/spaces/bodmedam/license-plate-detection) |
 | Dataset       | [Huggingface Dataset](https://huggingface.co/datasets/bodmedam/license-plate-data) |
 
