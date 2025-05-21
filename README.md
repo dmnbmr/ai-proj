@@ -127,9 +127,15 @@ While the grounding dino model is quick to set up and doesn't need labeled datas
 Because the App takes a relatively long time to analyze and caching is not working great, here are some prerun results:
 
 [Example 1 - US Plate from bad angle](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=YLsHFQyFzhs)
+
 [Example 2 - US Plate with bad lightning and small area](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=iBmmfNidCZg)
+
 [Example 3 - no Plate in image](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=NTcElySvVJo)
+
 [Example 4 - US Plate with good visibility](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=PNC6aCwF6kg)
+
 [Example 5 - EU Plate (NL) with good visibility](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=_9DEslRxsyc)
+
 [Example 6 - CH Plate with good visibility and second Plate very small](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=BGKex0APeYE)
+
 [Example 7 - License Plate with non latin letters](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=vaJeeHHyDsQ)
