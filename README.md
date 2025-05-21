@@ -15,7 +15,7 @@ This project detects license plates from cars.
 ## Data Source
 | Data Source | Description |
 |-------------|-------------|
-| [Roboflow](https://universe.roboflow.com/licence-plate-tracking/lpt-htgvb) | Dataset with 24'249 images prepared to train a model for object detection |
+| [Roboflow](https://universe.roboflow.com/licence-plate-tracking/lpt-htgvb/dataset/5) | Dataset with 24'249 images prepared to train a model for object detection |
 
 ## Data Augmentation
 The used base model for training (YOLOv8) includes a parameter for data augmentation (`augment=True`). The following are some of the used data augmentations:
@@ -131,14 +131,6 @@ These refinements led to:
 - Significantly higher consistency.
 - Less false positives.
 
-However, even with improvements, the **DINOv2 Base** still failed in cases where:
-- Plates were small, occluded, or poorly lit
-- Background context confused the attention mechanism
-- Angle and scale varied too strongly from typical web data
-
-
-
 ### Conclusion
 
 While the grounding dino model is quick to set up and doesn't need labeled datasets, the performance is currently not competitive with the trained YOLOv8 model. There are still a lot of false positives from the zero-shot model.
-
