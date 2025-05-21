@@ -1,7 +1,5 @@
 # License Plate Detector
-
 ## Project Description
-
 This project detects license plates from cars.
 
 ### Name & URL
@@ -29,7 +27,6 @@ The used base model for training (YOLOv8) includes a parameter for data augmenta
 | Flipping (horizontal)             | Flip horizontally. |
 
 ## Model Training
-
 ### Data Splitting Method (Train/Validation/Test)
 A total of 24'249 images of different types of license plates were used for training, validation, and testing. The dataset was already split before download as follows:  
 87% for training, 9% for validation, and 4% for testing.
@@ -58,7 +55,6 @@ The training was done with a Python-notebook on [Google Colab](https://colab.res
 | 50    | 1.001460       | 0.267320       | 1.067050       | 1.097240      | 0.237760      | 1.066460      | 98.38%   |
 
 ## Performance Results
-
 From the training log (`results.csv`), the following trends are evident:
 
 - **Training Loss** decreased steadily from **3.71** (epoch 1) to **2.86** (epoch 50), indicating consistent learning.
@@ -68,7 +64,6 @@ From the training log (`results.csv`), the following trends are evident:
 ![Training Results](./license-plate-detector/results.png)
 
 ### Precision and Recall
-
 The model achieves:
 
 - **Precision**: ~99%
@@ -83,14 +78,12 @@ These values confirm the model not only detects license plates consistently but 
 ![Recall Curve](./license-plate-detector/R_curve.png)
 
 ## Confidence and F1 Score
-
 - The F1-Confidence Curve peaks around a confidence threshold of **0.56**, with a maximum F1-score near **0.97**.
 - This indicates an excellent trade-off between precision and recall, and suggests that optimal detections are achieved at moderate confidence thresholds.
 
 ![F1 Confidence Curve](./license-plate-detector/F1_curve.png)
 
 ## Confusion Matrix
-
 - The raw confusion matrix shows that most license plates are correctly detected (TP = 2075).
 - The normalized version shows:
   - License Plate Recall: **~97%**
@@ -102,7 +95,6 @@ This confirms the model is highly accurate at distinguishing license plates from
 ![Normalized Confusion Matrix](./license-plate-detector/confusion_matrix_normalized.png)
 
 ## Label Analysis and Distribution
-
 - The `labels.jpg` and `labels_correlogram.jpg` plots confirm that the dataset is well-labeled and contains a balanced distribution, without class imbalance or annotation anomalies.
 - This helps explain the smooth learning curves and stable metrics.
 
@@ -110,9 +102,7 @@ This confirms the model is highly accurate at distinguishing license plates from
 ![Label Correlation](./license-plate-detector/labels_correlogram.jpg)
 
 ## Comparison to Zero-Shot Model
-
 ### First try: IDEA-Research/grounding-dino-tiny
-
 The Grounding Dino Tiny model performed poorly:
 
 - Many license plates were missed entirely.
@@ -120,7 +110,6 @@ The Grounding Dino Tiny model performed poorly:
 - Predictions were imprecise and inconsistent.
 
 ### Second Try: IDEA-Research/grounding-dino-base
-
 - Used a more specific prompt.
 - Changed to the base version instead of tiny.
 
@@ -132,5 +121,15 @@ These refinements led to:
 - Less false positives.
 
 ### Conclusion
-
 While the grounding dino model is quick to set up and doesn't need labeled datasets, the performance is currently not competitive with the trained YOLOv8 model. There are still a lot of false positives from the zero-shot model.
+
+## Examples of Gradio App Results
+Because the App takes a relatively long time to analyze and caching is not working great, here are some prerun results:
+
+[Example 1 - US Plate from bad angle](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=YLsHFQyFzhs)
+[Example 2 - US Plate with bad lightning and small area](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=iBmmfNidCZg)
+[Example 3 - no Plate in image](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=NTcElySvVJo)
+[Example 4 - US Plate with good visibility](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=PNC6aCwF6kg)
+[Example 5 - EU Plate (NL) with good visibility](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=_9DEslRxsyc)
+[Example 6 - CH Plate with good visibility and second Plate very small](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=BGKex0APeYE)
+[Example 7 - License Plate with non latin letters](https://bodmedam-license-plate-detection.hf.space/?__theme=system&deep_link=vaJeeHHyDsQ)
